@@ -1,0 +1,138 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ <!--
+<section class="property-binding">
+  
+    <article>
+        <H3>Interpolation / Interpolação</H3>
+        <p> String renderizada com interpolação: {{ url }}</p>
+        <p>Resultado de 1 + 1 é {{ 1+ 1}}</p>
+        <p>Resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}</p>
+        <p>Curso de Angular e gosto do curso:
+            {{ cursoAngular && getCurtirCurso() }}
+        </p>
+
+    </article>
+
+    <article>
+        <h3>Property Binding</h3>
+        <img src="{{ urlImagem }}" >
+        <img [src]="urlImagem2" >
+    </article>
+-->
+
+<!--
+
+
+    <article>
+        <h3>Class e Style binding</h3>
+        <div>
+            Selecione uma classe:
+            <select #classe (change) = "0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-warning">Alerta</option>
+                <option value="alert-danger">Erro</option>
+            </select>
+            <br><br>
+            
+            <!--Property binding com interpolação--><!--
+            <div class="alert  {{ classe.value }}" role="alert">
+                Texto colorido conforme valor do combobox.
+            </div>
+
+            <!--Property binding--><!--
+            <div class="alert" role="alert"
+            [class.alert-success]="classe.value == 'alert-success'">
+                A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert" role="alert"
+              [class.alert-info]="classe.value == 'alert-info'">
+                A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert" role="alert"
+              [class.alert-warning]="classe.value == 'alert-warning'">
+                A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>
+              <div class="alert" role="alert"
+              [class.alert-danger]="classe.value == 'alert-danger'">
+                A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+              </div>    
+              <!--Property binding estilo de classe--><!--
+              <div class="alert alert-danger" role="alert"
+              [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+                Esse texto só aparece em caso de erro.
+              </div>   
+
+        </div>
+    </article>
+
+</section>
+
+
+
+    <section class="event-binding">
+      <article>
+        <h3>Event Binding</h3>    
+         <div>
+             <button (click)="botaoClicado()"
+             class="btn btn-primary">Me clique!</button>
+
+             <br><br>
+
+             <input type="text"
+             (keyup)="onKeyUp($event)"/>
+
+             <p>Valor atual: {{ valorAtual }} </p>
+             <br>
+             <span 
+             (mouseover) = "onMouseOverOut()"
+             (mouseout) = "onMouseOverOut()"
+             [class.highlight] ="isMouseOver"
+             >
+                 Passe o mouse sobre mim
+            </span>
+         </div>
+     </article>
+    </section>
+
+
+    <section>
+      <article>
+        <h3>Two-way data binding</h3>
+        <div>
+    
+          <input type ="text"
+          [value]="nome"
+          (input) ="nome = nome2"          
+          />
+          <input type= "text" [(ngModel)] ="nome">  
+          <p>Você digitou o nome: {{ nome }}</p>    
+        </div>
+        <div>
+          <p>Meu nome é {{ pessoa.nome}} e tenho {{pessoa.idade}} 
+            anos de idade!
+          </p>
+
+          <input type="text" [(ngModel)]="pessoa.nome">
+          <input type="text" [(ngModel)]="pessoa.idade">
+        </div>
+
+      </article>
+    </section>
+    -->
+
+    <section class="input-output-properties">
+      <article>
+        <h3>Input/Output Properties</h3>
+
+        <app-curso [nome]="nomeDoCurso"></app-curso>
+
+        <contador [valor]="valorInicial"
+        (mudouValor)="onMudouValor($event)"
+        ></contador>
+
+      </article>
+
+    </section>
+    
+
